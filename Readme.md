@@ -8,16 +8,9 @@ Before doing anything, please run below commands
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-### Download Scripts
+### Support OS System
 
-* Install git 
-```
-sudo apt-get -y install git
+* Ubuntu
+* Centos
 
-```
-
-### Ubuntu
-
-
-### Centos
 
