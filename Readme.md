@@ -8,7 +8,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ### Supported Dev Environment
 
-- aaaa
+- Python虚拟环境安装
 - bbbb
 
 
