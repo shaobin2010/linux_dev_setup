@@ -22,8 +22,8 @@ USER_NAME="$1"
 
 . $TOPDIR/libraries/user-group-lib.sh
 
-sudo add_user_to_group sudo $USER_NAME
+add_user_to_group $USER_NAME sudo
 
-@echo "Done"
+echo "Done"
 
 exit 0
