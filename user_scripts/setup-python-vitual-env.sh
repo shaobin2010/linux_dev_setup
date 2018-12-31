@@ -1,19 +1,20 @@
 #!/bin/bash
 
-set -e 
-
 sudo apt install -y python-pip
 
-sudo pip install virtualenv -i https://pypi.douban.com/simple
-sudo pip install virtualenvwrapper -i https://pypi.douban.com/simple
+pip install virtualenv -i https://pypi.douban.com/simple
+pip install virtualenvwrapper -i https://pypi.douban.com/simple
 
-if [ -z $HOME/.virtualenvs ]; then
-    mkdir $HOME/.virtualenvs
+if [ ! -d $HOME/.virtualenvs ]; then
+    echo "create .virtualenvs directory"
+    mkdir -p $HOME/.virtualenvs
 fi
 
-if [ -z 'cat $HOME/.bashrc | grep WORKON_HOME=' ]; then
+if grep "WORKON_HOME=" /home/h278775/.bashrc; then
+    echo "..........."
+else
     echo 'export WORKON_HOME=$HOME/.virtualenvs' >> $HOME/.bashrc
-    echo 'source /usr/local/bin/virtualenvwrapper.sh' >> $HOME/.bashrc
+    echo 'source $HOME/.local/bin/virtualenvwrapper.sh' >> $HOME/.bashrc
 fi
 
 echo "Done"
