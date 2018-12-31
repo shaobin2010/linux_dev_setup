@@ -4,8 +4,8 @@ set -e
 
 sudo apt install -y python-pip
 
-sudo pip install virtualenv
-sudo pip install virtualenvwrapper
+sudo pip install virtualenv -i https://pypi.douban.com/simple
+sudo pip install virtualenvwrapper -i https://pypi.douban.com/simple
 
 if [ -z $HOME/.virtualenvs ]; then
     mkdir $HOME/.virtualenvs
