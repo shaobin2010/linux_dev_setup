@@ -7,7 +7,7 @@ if [ ! -e ~/.vimrc ]; then
     touch ~/.vimrc
 fi
 
-cat ~/.vimrc <<EOF
+cat > ~/.vimrc <<EOF
 
 "==========================================
 " General Settings
