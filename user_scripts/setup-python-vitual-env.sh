@@ -15,6 +15,9 @@ if grep "WORKON_HOME=" /home/h278775/.bashrc; then
 else
     echo 'export WORKON_HOME=$HOME/.virtualenvs' >> $HOME/.bashrc
     echo 'source $HOME/.local/bin/virtualenvwrapper.sh' >> $HOME/.bashrc
+    echo "**************************************************************"
+    echo "*            Please do \"source ~/.bashrc\"                   "
+    echo "**************************************************************"
 fi
 
 echo "Done"
