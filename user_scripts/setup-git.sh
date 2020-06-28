@@ -2,7 +2,7 @@
 
 set -e 
 
-git config --global user.name "shaobin2010"
+git config --global user.name "shawn Wang"
 git config --global user.email shaobin2010@163.com
 
 git config --global push.default simple

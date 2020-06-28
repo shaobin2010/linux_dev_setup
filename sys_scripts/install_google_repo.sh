@@ -1,10 +1,20 @@
 #!/bin/bash
 
 set -e
+mkdir ~/bin
 
-curl -o /usr/local/bin/repo https://raw.githubusercontent.com/shaobin2010/google-repo/master/repo
+curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > ~/bin/repo
+chmod a+x ~/bin/repo
 
-chmod a+x /usr/local/bin/repo
+if [ ! -e ~/.bashrc ]; then
+    echo "create .bashrc file"
+    touch ~/.bashrc
+fi
+
+cat >> ~/.bashrc <<EOF
+PATH=~/bin:\$PATH
+export REPO_URL="https://mirrors.tuna.tsinghua.edu.cn/git/git-repo"
+EOF
 
 echo "Done"
 exit 0
